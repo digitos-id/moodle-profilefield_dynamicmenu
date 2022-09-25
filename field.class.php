@@ -48,9 +48,9 @@ class profile_field_dynamicmenu extends profile_field_base {
      * @param int $fieldid
      * @param int $userid
      */
-    public function __construct($fieldid = 0, $userid = 0) {
+    public function __construct($fieldid = 0, $userid = 0, $fielddata) {
         // First call parent constructor.
-        parent::__construct($fieldid, $userid);
+        parent::__construct($fieldid, $userid, $fielddata);
         // Only if we actually need data.
         if ($fieldid !== 0 && $userid !== 0) {
             $mykey = $fieldid.','.$userid; // It will always work because they are number, so no chance of ambiguity.
